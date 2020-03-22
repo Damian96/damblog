@@ -1,0 +1,34 @@
+{
+  "name": "damblog",
+  "version": "0.1.0",
+  "description": "My personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Damian96/damblog.git"
+  },
+  "keywords": [
+    "blog",
+    "web-dev",
+    "web development"
+  ],
+  "author": "Damian96",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "console-stamp": "^0.2.9",
+    "gulp-print": "^5.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "shell-exec": "^1.0.2"
+  }
+}
