@@ -1,0 +1,18 @@
+{
+    "sassFiles": "minima/_sass",
+    "siteCssFiles": "_site/assets/",
+    "siteJsFiles": "_site/assets/",
+    "siteFontFiles": "_site/assets/",
+    "siteImageFiles": "_site/assets/images",
+    "siteDownloadFiles": "_site/assets/download/",
+    "jekyllCssFiles": "_site/assets/",
+    "jekyllJsFiles": "_site/assets/",
+    "jekyllFontFiles": "_site/assets/",
+    "jekyllImageFiles": "_site/assets/images",
+    "jekyllDownloadFiles": "_site/assets/downloads/",
+    "jsFiles": "_assets/js/",
+    "jsPattern": "*.js",
+    "fontFilesGlob": "_assets/fonts/*",
+    "imageFilesGlob": "_assets/images/*",
+    "downloadFiles": "_assets/downloads/"
+}
