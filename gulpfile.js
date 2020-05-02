@@ -63,7 +63,9 @@ gulp.task('build:scripts:global', function () {
 	return gulp.src([
 		paths.jsFiles + '/lib' + paths.jsPattern,
 		paths.jsFiles + '/*.js'
-	])
+	], {
+		allowEmpty: true
+	})
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.jekyllJsFiles))
@@ -74,7 +76,9 @@ gulp.task('build:scripts:global', function () {
 // Uglify local JS files and output the result to the
 // appropriate location
 gulp.task('build:scripts:local', function () {
-	return gulp.src(paths.jsFiles + '/local' + paths.jsPattern)
+	return gulp.src(paths.jsFiles + '/local' + paths.jsPattern, {
+		allowEmpty: true
+	})
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.jekyllJsFiles))
 		.pipe(gulp.dest(paths.siteJsFiles))
@@ -172,7 +176,7 @@ gulp.task('build:jekyll:test', function () {
 
 // Run jekyll build command using local config
 gulp.task('build:jekyll:local', function () {
-	return gulp.src('')
+	return gulp.src('*')
 		.pipe(run('bundle exec jekyll build'))
 		.on('error', gutil.log);
 });
@@ -201,13 +205,6 @@ gulp.task('default', gulp.series('build'));
 
 // Serve site and watch files
 gulp.task('serve', gulp.series('build'), function () {
-	browserSync.init({
-		server: paths.siteDir,
-		ghostMode: false, // Toggle to mirror clicks, reloads etc (performance)
-		logFileChanges: true,
-		logLevel: 'debug',
-		open: true       // Toggle to auto-open page when starting
-	});
 	gulp.watch(['_config.yml'], ['build:jekyll:watch']);
 	// Watch .scss files and pipe changes to browserSync
 	gulp.watch('_assets/styles/**/*.scss', ['build:styles']);
@@ -227,4 +224,22 @@ gulp.task('serve', gulp.series('build'), function () {
 	gulp.watch('feed.xml', ['build:jekyll:watch']);
 	// Watch data files
 	gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
+});
+
+gulp.task('browsersync', function () {
+	browserSync.init({
+		server: paths.siteDir,
+		ghostMode: false, // Toggle to mirror clicks, reloads etc (performance)
+		logFileChanges: true,
+		logLevel: 'debug',
+		browser: 'firefox',
+		watch: true,
+		callbacks: {
+			ready: function (err, bs) {
+				// example of accessing URLS
+				console.log(bs.options.get('urls'));
+			},
+			open: true       // Toggle to auto-open page when starting
+		}
+	});
 });

@@ -21,12 +21,11 @@
 title: Damian96's Blog
 email: damgiankakis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  In this blog I like to write about any Web Development hack / solution that I may find.
+# I also write about web extensions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.test" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: none
+#twitter_username: none
 github_username:  Damian96
 
 # Build settings
@@ -42,7 +41,11 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+    - index.js
+    - gulpfile.js
+    - package.json
+    - package-lock.json
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

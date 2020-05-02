@@ -4,7 +4,8 @@
   "description": "My personal blog",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "serve": "node_modules/gulp/bin/gulp.js serve"
   },
   "repository": {
     "type": "git",

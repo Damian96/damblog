@@ -1,5 +1,6 @@
 {
     "sassFiles": "minima/_sass",
+    "siteDir": "_site",
     "siteCssFiles": "_site/assets/",
     "siteJsFiles": "_site/assets/",
     "siteFontFiles": "_site/assets/",
@@ -11,7 +12,7 @@
     "jekyllImageFiles": "_site/assets/images",
     "jekyllDownloadFiles": "_site/assets/downloads/",
     "jsFiles": "_assets/js/",
-    "jsPattern": "*.js",
+    "jsPattern": "",
     "fontFilesGlob": "_assets/fonts/*",
     "imageFilesGlob": "_assets/images/*",
     "downloadFiles": "_assets/downloads/"
