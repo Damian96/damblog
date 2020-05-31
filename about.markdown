@@ -1,18 +1,25 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+{% highlight bash %}
+hello() {
+    name=$1
+    printf "%s\n" "Hi, $name"
+}
+hello "guest"
+{% endhighlight %}
 
 
-[jekyll-organization]: https://github.com/jekyll
+My name is Damianos Giankakis, and I am a graduate of City College, International Faculty of the University of Sheffield. I am currently unemployed, so you can send any job offer at [my email](mailto:damgiankakis@gmail.com).
+
+My main skills are:
+* JavaScript ES6 / Browser Addons
+* PHP 7 / Laravel 6
+* Shell Scripting / Bash
+* Android Studio / Java
+
+I can speak **Greek**, **English** and **German**. I live in SKG, Macedonia Greece.<br>
+In my spare time I like to go 🏊 or play 🏀.
