@@ -1,6 +1,9 @@
 {
     "files.exclude": {
-        "**/.jekyll-cache": true
+        "**/_site": true,
+        "**/.jekyll-cache": true,
+        "**/.sass-cache": true,
+        "**/node_modules": true
     },
     "files.watcherExclude": {
         "**/_site/**": true,
