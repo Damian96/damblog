@@ -1,5 +1,9 @@
 {
     "files.exclude": {
         "**/.jekyll-cache": true
+    },
+    "files.watcherExclude": {
+        "**/_site/**": true,
+        "**/.sass-cache/**": true
     }
 }
